@@ -25,5 +25,32 @@ make
 
 To clean up folders, run
 ```
-make clean 
+make release		// removes excess latex files in each subject folder
+make clean			// remove all pdfs in the pdf folder
 ```
+
+## Development
+Each subject inside the _subjects_ folder follows a certain folder structure.
+
+	subject/
+	├── Makefile
+	├── units
+	│   ├── 1.tex
+	│   ├── 2.tex
+	│   └── etc.tex
+	├── figures
+	│   ├── diagram.jpg
+	│   └── diagram2.jpg
+	└── notes.tex
+
+Compile each subject individually by running:
+```
+make
+```
+
+Clean up by running:
+```
+make clean
+```
+
+The `notes.tex` is the main LaTeX document.
