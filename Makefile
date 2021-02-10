@@ -8,9 +8,11 @@ build:
 		cd $(PROJECTDIR) ;\
 	done
 
-clean:
-	rm $(TARGET)/*
+release:
 	for	i in $(shell ls -Q $(SUBJECTS)); do \
 		cd $(SUBJECTS)/"$$i" && $(MAKE) clean ; \
 		cd $(PROJECTDIR) ;\
 	done
+
+clean:
+	rm $(TARGET)/*
