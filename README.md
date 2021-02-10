@@ -7,7 +7,7 @@ All notes are currently __INCOMPLETE__, please use with precaution.
 ## Current Subjects Include: 
 
 * [Mathematics Analysis and Approaches HL](https://github.com/CookieUzen/unit-notes/blob/main/pdf/Math%20AA.pdf)
-* [Computer Science SL](https://github.com/CookieUzen/unit-notes/blob/main/pdf/Computer%20Science%20.pdf)
+* [Computer Science SL](https://github.com/CookieUzen/unit-notes/blob/main/pdf/Computer%20Science.pdf)
 * [Physics HL](https://github.com/CookieUzen/unit-notes/blob/main/pdf/Physics.pdf)
 * [Business Management HL](https://github.com/CookieUzen/unit-notes/blob/main/pdf/Business%20Management.pdf)
 
