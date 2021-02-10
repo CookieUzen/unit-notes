@@ -1,0 +1,394 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+
+\section{Functional Relationships}
+The set of x-values that make up a function is called the domain.
+The set of y-values that make up a function is called the range.
+
+An equation is a function only when $f$ acts on all elements of the domain, and each domain pairs with one and only one range element.
+This test is called the vertical line test.
+If one were to drawn an infinitely long vertical line on any x domain, then the vertical line will only intersect the function at one point.
+
+There is a similar test called the horizontal line test. 
+In which a infinitely long horizontal line is drawn on any $y$ range, then the horizontal line will only intersect the function at one point.
+A function must pass the horizontal line test in order to have an inverse.
+
+\subsection{Odd and Even Functions}
+An even function is a function that is symmetric over the $y$ axis.
+Or in other words, $f(x) = f(-x)$.
+
+An odd function is a function that is symmetric over the line $y=-x$.
+Or in other words, $f(x) = -f(-x)$
+
+\subsection{Mapping}
+A one to one function is where every point of the domain corresponds to one point on the range.
+A one to many function is where every point of the domain corresponds to many points on the range, this if not a function.
+A many to one function is where many points of the domain corresponds to the same point on the range, this function does not have an inverse function.
+A many to many function is where many points on the domain corresponds to many points on the range, this is not a function.
+
+\subsection{Self Inverse}
+If the inverse of a function is itself, it is a self inversing function.
+\begin{equation}
+	f^{-1}(x) = f(x)
+\end{equation}
+
+\section{Special Functions and Their Graphs}
+
+\subsection{Domain and Range of Common Functions}
+
+\begin{alignat}{3}
+	y &= mx + b \qquad &&x \in R,\; y \in R\\
+	y &= ax^2 + bx + c \qquad &&x \in R,\;
+	\begin{dcases}
+		\textrm{if } a > 0, y \ge k \\
+		\textrm{if } a < 0, y \le k
+	\end{dcases} && \qquad \textrm{where } (h,k) \textrm{ is the vertex}\\
+	y &= a^x \quad (a>0,\; a\neq1) \qquad && x \in R,\; y > 0 \qquad && (y = 0 \textrm{ is an asymptote}) \\
+	y &= \log_a{x} \quad (a>0,\;a\neq1) \qquad && x > 0,\; y \in R \qquad && (x=0 \textrm{ is an asymptote}) \\
+	y &= \frac{1}{x} \quad && x \neq 0,\; y \neq 0 \qquad && (x=0 \textrm{ and } y=0 \textrm{ are the asymptote}) \\
+	y &= \frac{ax+b}{cx+d} \quad && x \neq -\frac{d}{c},\; y\neq \frac{a}{c} \\
+	y &= \sqrt{x} \quad && x \ge 0,\; y \ge 0 \\
+	y &= \sin{x} \quad && x \in R, \; -1 \le y \le 1 \\
+	y &= \cos{x} \quad && x \in R,\; -1 \le y \le 1 \\
+	y &= \tan{x} \quad && x \neq \frac{\pi}{2}+k\pi,\;k \in Z,\quad y \in R \\
+\end{alignat} 
+
+In general, for the domain of each equation, watch out for vertical asymptotes and undefined numbers ($\sqrt{-1},\; \frac{1}{0}$).
+
+For the range of each equation, watch out for horizontal asymptotes, turning points/vertex, and domain limitations.
+
+\subsection{Quadratic Functions}
+
+\subsubsection{Forms of Quadratics}
+A quadratic function have 3 forms: Standard form, Vertex form, and Intercept form.
+
+\begin{align}
+	y &= ax^2 + bx + c \\
+	y &= a(x-h)^2 + k \\
+	y &= a(x-p)(x-q) 
+\end{align} 
+
+In the standard form, $a$ defines to concavity of the function.
+If $a>0$, the quadratic concaves up, if $a<0$, the quadratic concave down.
+$c$ represents the x-intercept of the quadratic.
+
+In vertex form, $(h,k)$ is the vertex of the quadratic.
+A vertex is the turning point of the quadratic, it is also where the axis of symmetry lies.
+The quadratic is mirrored across the axis of symmetry.
+
+In the intercept form, $p$ and $q$ are the x intercepts (or zeros) of the function.
+
+\subsubsection{Equations}
+The equation for the axis of symmetry is:
+\begin{equation}
+	x = -\frac{b}{2a}
+\end{equation}
+
+The sum of roots of a quadratic is:
+\begin{equation}
+	(\alpha+\beta) = -\frac{b}{a}
+\end{equation}
+
+The product of roots of a quadratic is:
+\begin{equation}
+	(\alpha \cdot \beta) = \frac{c}{a}
+\end{equation}
+
+\subsubsection{Finding the Roots}
+There are four ways to find the roots of a quadratic.
+You can graph it using the GDC.
+You can use the quadratic formula.
+You can use complete the square.
+
+The quadratic formula is listed below:
+\begin{equation}
+	x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{equation}
+
+$\Delta = b^2-4ac$ is the discriminant.
+If:
+\begin{itemize}
+	\item $\Delta > 0$, the function have 2 real roots
+	\item $\Delta = 0$, the function have 1 unique real root
+	\item $\Delta < 0$, the function have no real roots. 
+\end{itemize}
+
+To factor, simply factor the quadratic into the intercept form using the sum and product of roots equations.
+
+To complete the square, start with the equation in standard from.
+Set $y$ to zero.
+Then, remove the coefficient of x (by factoring it out).
+Afterwards, use the property $(a+b)^2  = a^2 + 2ab + b^2$ to factor the equation into vertex form.
+
+\subsection{Rational Function}
+A function is rational function if its is made up of the dividing of two polynomials.
+\begin{equation}
+	y = \frac{f(x)}{g(x)}
+\end{equation}
+Where $f(x)$ and $g(x)$ are the two polynomials.
+
+The reciprocal function $y=\frac{1}{x}$ is a polynomial.
+
+There is four important points on a polynomial. 
+These are the:
+\begin{itemize}
+	\item Horizontal Asymptote
+	\item Vertical Asymptote
+	\item X-Intercept
+	\item Y-Intercept
+\end{itemize} 
+We generally use plot these points/lines first before drawing a polynomial.
+
+To find the horizontal asymptote, there is 3 possibility.
+\begin{itemize}
+	\item If $f(x)$ has the higher degree, then there is no horizontal asymptote
+	\item If $g(x)$ has the higher degree, then the horizontal asymptote is $y=0$ 
+	\item If $g(x)$ and $f(x)$ have the same degree, then the horizontal asymptote is $y=\frac{f_n}{q_n}$, where $f_n$ and $q_n$ are the leading coefficient of  $f(x)$ and  $p(x)$. 
+\end{itemize}
+
+The vertical asymptote is when $g(x) = 0$.
+Thus, find the roots of $g(x)$.
+
+To find the x-intercept, find the roots of $f(x)$.
+
+The y-intercept is at point $\frac{b}{c}$.
+Where $b$ is the constant of $f(x)$ and  $c$ is the constant of $g(x)$. 
+
+\subsubsection{Drawing Rational Function}
+After plotting all four points/lines, plot a sign diagram.
+Where the roots of $f(x)$ and $g(x)$ are the numbers.
+This sign diagram represents the domain of the rational function.
+Find whether the value of the y is positive or negative in each section of the sign diagram.
+
+Use this information to plot the rational function.
+
+\subsection{Absolute Value Functions and Equations}
+\begin{equation}
+	|a| = 
+	\begin{dcases}
+		\;\;\;a,\; a \ge 0 \\
+		-a,\; a \le 0 \\
+	\end{dcases}
+\end{equation}
+
+\subsubsection{Useful Features of An Absolute Function}
+\begin{align}
+	|a| &\ge 0 \\
+	|-a| &= |a| \\
+	|ab| &= |a||b| \\
+	|a+b| &\le |a| + |b| \\
+	|a-b| &\ge |a| - |b| \\
+\end{align} 
+
+\subsubsection{Removing Absolute Value}
+You can add a $\pm$ on the other side. 
+\begin{align*}
+	|x| &= y \\
+	x &= \pm y
+\end{align*} 
+
+Or square both sides:
+\begin{align*}
+	|x| &= y \\
+	x^2 &= y^2
+\end{align*}
+Note, squaring changes the domain. 
+Recheck you answers after squaring.
+
+\subsubsection{Inequalities}
+You cannot add $\pm$ in a inequality.
+As $\pm$ means potentially flipping the inequality.
+Thus, we split the equation up into two parts.
+
+\begin{align*}
+	y &> |x| \\ 
+	y < x \; &\textrm{ or } \; y > x \\
+\end{align*} 
+
+There are some short cuts.
+\begin{align}
+	x < |a| &= -a < x < a \\
+	x > |a| &= x > a \textrm{ or } x < -a 
+\end{align} 
+
+\section{Operations with Function}
+To do functional operation, put the function in quotes, then do operations.
+
+\begin{align*}
+	f(x) &= x+5 \\
+	g(x) &= 3x \\
+	f(x) \cdot g(x) &= (x+5)(3x)
+\end{align*} 
+
+\subsection{Composite Functions}
+\begin{align*}
+	f \circ g(x) = f(g(x))
+\end{align*} 
+In order for the composite function exist, the range of $g(x)$ has to fit within the domain of $f(x)$. 
+Else, some values may be undefined.
+
+The range of $f \circ g(x)$ is a subset of $f(x)$.
+
+\subsection{Identity Function}
+The identity function is a function which when composed with another function, it remains unchanged.
+\begin{equation}
+	f \circ g(x) = f(x)
+\end{equation}
+$g(x)$ is an identity function.
+
+Generally, $f(x) = x$ is an identical function.
+
+\subsection{Inverse}
+An inverse function is a function that returns the identity function when composited with another function.
+\begin{equation}
+	f(x) \circ g(x) = x
+\end{equation}
+We often write this function in special notation: $f^{-1}(x)$
+
+To find the inverse function of a certain function, swap the x and y values of the function.
+Then solve for y.
+\begin{align*}
+	f(x)    & = \frac{4x}{2x-2} \\
+	x       & = \frac{4y}{2y-2} \\
+	2yx -2x & = 4y \\
+	2yx-4y  & = 2x \\
+	y(2x-4) & = 2x \\
+	y       & = \frac{2x}{2x-4} \\
+	f^{-1}(x) & = \frac{2x}{2x-4}
+\end{align*} 
+
+Note, when calculating the point where the inverse of a function intersect with the function, we can use the equation: $f(x) = x$ to find the point of intersection.
+
+The domain of the inverse function is the range of the original function. 
+The range of the inverse function is the domain of the original function.
+
+\subsection{Reciprocal Function}
+The reciprocal function is 
+\begin{equation}
+	f(x)=\frac{1}{x}
+\end{equation}
+
+When graphing the reciprocal of a function, there are several points important points.
+\begin{itemize}
+	\item all points at $y=1$ stays unchanged
+	\item roots of the original function becomes asymptote
+	\item positive numbers stays positive, negative numbers stay negative
+	\item $y$ values above $|1|$ is stretched upwards, while $y$ values below $|1|$ shrinks
+\end{itemize}
+
+\section{Transformations}
+There is three types of transformation. 
+Translation, stretch, and reflection.
+
+\begin{equation}
+	f(x) \Rightarrow A \cdot f(Bx + C) + D
+\end{equation} 
+Where:
+\begin{itemize}
+	\item $A$ is vertical stretch.
+	\item $\frac{1}{B}$ is horizontal stretch.
+	\item $-C$ is horizontal translation.
+	\item $D$ is vertical translation.
+\end{itemize}
+
+Sometimes, we would use a translation vector:
+\begin{equation}
+	\begin{pmatrix}
+		a \\
+		b
+	\end{pmatrix} \rightarrow f(x-a)+b
+\end{equation}
+
+\subsection{Translation}
+\begin{alignat}{2}
+	&f(x+a) \qquad && f(x) \textrm{ shifts to the left by } a \textrm{ units } \\
+	&f(x-a) \qquad && f(x) \textrm{ shifts to the right by } a \textrm{ units } \\
+	&f(x)+a \qquad && f(x) \textrm{ shifts upwards by } a \textrm{ units } \\
+	&f(x)-a \qquad && f(x) \textrm{ shifts downwards by } a \textrm{ units }
+\end{alignat}
+
+Be very careful, as adding inside the bracket will shift the function to the \textit{left}.
+
+\subsection{Stretch}
+\begin{alignat}{2}
+	&f(ax) \qquad && f(x) \textrm{ is horizontally stretched by a factor of } \frac{1}{a} \\
+	&f(\frac{x}{a}) \qquad && f(x) \textrm{ is horizontally stretched by a factor of } a \\
+	&a \cdot f(x) \qquad && f(x) \textrm{ is vertically stretched by a factor of } a \\
+	&\frac{1}{a} \cdot f(x) \qquad && f(x) \textrm{ is vertically stretched by a factor of } \frac{1}{a} \\
+\end{alignat}
+
+Be very careful, as horizontal stretching by a factor of $a$ is actually multiplying by a factor of $\frac{1}{a}$.
+
+\subsection{Reflection}
+Multiplying the contents of a function by $-1$ can reflect the function across the $x$ or $y$ axis.
+
+\begin{equation}
+	\begin{dcases}
+		f(x) \rightarrow f(-x) \qquad f(x) \textrm{ is reflected by y-axis } \\
+		f(x) \rightarrow -f(x) \qquad f(x) \textrm{ is reflected by x-axis }
+	\end{dcases}
+\end{equation}
+
+\subsection{Modulus}
+Similar to reflection, adding an absolute value reflects all negative values across an axis.
+\begin{equation}
+	\begin{dcases}
+		f(x) \rightarrow f(|x|) \qquad f(-x) = f(x) \\
+		f(x) \rightarrow |f(x)| \qquad -f(x) = f(x)
+	\end{dcases}
+\end{equation}
+
+\section{Systems of Equations}
+A system of equation means that there is multiple variables and multiple equations.
+A system of equation with n variables will need n equations to solve completely.
+
+There is two ways to solve a system of equation: substitution or elimination.
+In a systems of equation, combine two equations to substitute or eliminate an equation.
+Keep repeating the step above until you reach one answer.
+Use that answer to plug in, and solve for other variables.
+
+For system of equation with more than 2 equations, use the Gaussian Elimination method.
+First, put the system of equation in matrix form.
+Then manipulate the matrix until it become an identity matrix.
+You can multiply each row by the same factor, and you can add a row by another row.
+
+\begin{align}
+&\begin{dcases}
+	2x + y + z = 7 \\
+	x + 3y + 2z = 13 \\
+	4x - 2y + 3z = 9
+\end{dcases} \\ 
+&\left[ \begin{array}{ccc|c}
+	2 & 1 & 1 & 7 \\
+	1 & 3 & 2 & 13 \\
+	4 & -2 & 3 & 9 
+\end{array} \right] \\
+&\left[ \begin{array}{ccc|c}
+	1 & 3 & 2 & 13 \\
+	0 & 5 & 3 & 19 \\
+	0 & 14 & 5 & 43 
+\end{array} \right] \\
+&\left[ \begin{array}{ccc|c}
+	1 & 3 & 2 & 13 \\
+	0 & 5 & 3 & 19 \\
+	0 & 0 & 1 & 3
+\end{array} \right] \\
+&\left[ \begin{array}{ccc|c}
+	1 & 3 & 0 & 7 \\
+	0 & 1 & 0 & 2 \\
+	0 & 0 & 1 & 3
+\end{array} \right] \\
+&\left[ \begin{array}{ccc|c}
+	1 & 0 & 0 & 1 \\
+	0 & 1 & 0 & 2 \\
+	0 & 0 & 1 & 3
+\end{array} \right] \\
+&\begin{dcases}
+	x = 1 \\
+	y = 2 \\
+	z = 3 \\
+\end{dcases}
+\end{align} 
+
+\end{document}

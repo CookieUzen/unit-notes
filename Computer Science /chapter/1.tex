@@ -1,0 +1,118 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+\section{Systems in Organizations}
+
+\subsection{System life cycle}
+System life cycle discusses the process of developing a new system.
+
+\begin{itemize}
+	\item Existing System Analysis
+	\item Requirement Specification
+	\item Software Design
+	\item Software Implementation
+	\item Testing \& Debugging
+	\item New System Installation 
+	\item Maintenance
+\end{itemize}
+
+Often times, we can simplify this to the \texttt{Software Life Cycle}
+\begin{itemize}
+	\item Planning and Analysis
+	\item Design Overview
+	\item Development
+	\item Evaluation
+\end{itemize}
+
+\subsection{Planning a New System}
+We can use the acronym \texttt{TELOS} to plan whether or not to use a new system.
+
+\vspace{1em}
+
+\noindent \textbf{Technical Feasibility}: Can we actually implement this system? \\
+\noindent \textbf{Economic Feasibility:} Is the system cost effective? \\
+\noindent \textbf{Legal Feasibility:} Is there any legal issues? \\
+\noindent \textbf{Operational Feasibility:} Is the current practices sufficient to support the new system \\ \noindent \textbf{Schedule Feasibility:} How long do we need to wait? \\
+
+\subsection{Change Management}
+\texttt{Change Management} refer to the process of shifting individuals, teams, departments, and organizations.
+The purpose of Change Management is move a company into a more efficient state, while minimizing the negative effects of the process.
+
+\subsection{Compatibility Issue}
+There may be compatibility issues when encountering a \texttt{Legacy System}.
+A Legacy System is a general term referring to old technology.
+For example, an old printer may be called a legacy printer.
+Keeping around legacy systems is troublesome, since companies may no longer support the technology (replacement parts are no longer produced, software is incompatible).
+There may also be compatibility issues when interacting with legacy systems, as it might no support new protocol, or have a outdated proprietary software.
+
+\subsubsection{Four Strategies of Integration}
+\begin{enumerate}
+	\item Keep both information system, and develop them to have the same functionality (high maintenance cost)
+	\item Replace both information systems with a new one (increased inital cost)
+	\item Select the best information system from each company and combine them (it is very difficult for the employees to work information systems from another company)
+	\item Select one company's information systems and drop the other companies' (policy problems)
+\end{enumerate}
+
+\subsection{SaaS}
+Nowadays, there is many different methods of providing business software.
+Some clients install their software on their own premises, while other have the software installed on dedicated servers that provide these services.
+
+SaaS is one of the methods of providing services.
+Software and data is hosted on a remote data center, where clients pay fees to access the services.
+SaaS relies heavily on the Internet.
+Some examples of SaaS are Dropbox, Gmail, and Salesforce.
+
+Nowadays, SaaS is less expensive and have a lower initial cost.
+It is easier to install, maintain, and upgrade. 
+It is easily scalable, allowing for rapid growth.
+It requires less IT staff to manage.
+
+However, SaaS requires a constant Internet connection.
+It is based on a monthly subscription.
+Since the information is stored on a remote server, there is no guarantee of security.
+
+\subsection{Alternative Installation Process}
+Installing a new system is a necessary evil in many enterprises.
+Many users do not like to adjust to a new system, and changeover can cause many compatibility issue.
+Yet, installing new software is an essential part of the everyday operation of the IT Department.
+
+There are four common types of software changeovers:
+
+\subsubsection{Parallel}
+In a parallel changeover, both software work simultaneously for a period of time.
+If the new system fails, the old system is usable.
+Only when the new system have been running smoothly can the old system be retired.
+
+Parallel changeover is the safest method, but the most time consuming.
+As both system is required to be running, additional resources is needed to support both systems.
+However, this method is not effective if the old system and new system does different tasks.
+
+\subsubsection{Big Bang}
+Big Bang, or direct changeover is a risk operation where the old system is retired immediately, and the new system is immediately put in use.
+This system is risky, and should be only used for non critical systems.
+In this case, all users need to be trained before-hand on the new system.
+
+\subsubsection{Pilot}
+A pilot changeover is used in a company with a lot of sites.
+In a pilot changeover, a new system is introduced in sites one at a time.
+This method allows for a enterprises to test out the new system before implementing it fully.
+And the feedback received from each system can be used to improve the changeover at other sites.
+
+\subsubsection{Phased}
+A phased conversion is used a system with many modules. 
+A company may change one module at a time, so that the system is converted at different times.
+This approach allows for an extended training an adoption of the system, but takes more time.
+
+\subsection{Data Migration}
+Data migration occurs when data in transfered between different storage devices or different formats.
+There are many problems that will occur when data is transfered between two systems. 
+Errors such as incompatibility, corruption, virus, etc, can cause irreparable lost to the data.
+To guarantee the safety of the data, following three steps when migrating data.
+
+\begin{enumerate}
+	\item Plan
+	\item Migrate
+	\item Validate
+\end{enumerate}
+
+\end{document}

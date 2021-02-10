@@ -1,0 +1,37 @@
+\documentclass{report}
+
+\title{Math Unit Notes}
+\author{Uzen}
+\date{Dec 28}
+
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{array}
+
+\usepackage{subfiles}
+
+\parskip=0.5em
+
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Sequence and Series}
+\subfile{./chapter/1.tex}
+
+\chapter{Functions}
+\subfile{./chapter/2.tex}
+
+\chapter{Exponents and Logarithms}
+\subfile{./chapter/exp logs.tex}
+
+
+
+\end{document}

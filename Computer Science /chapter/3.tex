@@ -1,0 +1,339 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+	
+\section*{Vocabulary}
+\begin{itemize}
+	\item Bus Topology: Computer network in which a ``bus'' connects all the devices together with a cable
+	\item Cable: a wire that is used for networking
+	\item Check Digit: Extra digit added to check data integrity after input, transmission, storage, or processing
+	\item Data Integrity: Accuracy of data after input, transmission, storage, or processing
+	\item Data Packet: Portion of a message that is transmitted through a network. Contains data such as check digits and destination address.
+	\item Gateway: Link that resides between computer networks that convert data so that it is understood by the receiving network.
+	\item Handshaking: exchange of predetermined signals to signify that a connection has been established between two systems.
+	\item Hub: Network connection point for devices. Data arriving at a hub is copied over and sent to all the devices on the network.
+	\item ISDN (Integrated Services Digital Network): An international communication standard that allows for the transmission of media over digital telephone lines.
+	\item LAN (Local Area Network): A computer network where the computers are connected locally. 
+	\item Microwave Transmission: Wireless electronic communication
+	\item Modem (Modulator/Demodulator): A device that converts electrical device to audio signals that travels on telephone lines.
+	\item Network: Computer systems that are interconnected. 
+	\item Packet: Group of bits that form some sort of data. 
+	\item Packet Switching: method of network communication that transmit packets through a network.
+	\item Networking: Using a network. 
+	\item Parity bit: Error detecting bit that is appended on data in order to check for data integrity
+	\item Protocol: International rules that ensure the transfer of data between system.
+	\item TCP/IP (Transmission Control Protocol/Internet Protocol): Communication protocol used for connection on the Internet.
+	\item WAN (Wide Area Networks): A connected network of LANs.
+\end{itemize}
+
+\section{Network Fundamentals}
+
+\subsection{Different Types of Computer Networks}
+In a computer network, there is often a \textit{Server} and a \textit{Client}. 
+A \textit{Server} provides services to the \textit{client}.
+
+In a network, there is three important device.
+A \texttt{hub} is a connection point for devices on a network. 
+Network devices are connected to the hub through a cable.
+When a client request some data from a server, the hub copies the data and send it to all devices connected to it. 
+This is sometimes problematic, as it causes extra traffic in the network.
+
+Similar to a hub, a \texttt{switch} is a connection point for devices on a network.
+However, a switch is able to identify the device on each port, and transmit data accordingly to the receiver.
+Nowadays, hubs are obsolete.
+
+A \texttt{router} is device that join multiple networks.
+One potential job of a router is joining the LAN with the Internet.
+A simple switch cannot accomplish this job.
+However, nowadays, routers and switch are mostly integrated into one device, allowing the creation of wireless networks connected to wired ones.
+
+Below is a list of the common network types:
+\begin{itemize}
+	\item LAN
+	\item WLAN (Wireless LAN)
+	\item VLAN (Virtual LAN)
+	\item WAN
+	\item SAN (Storage Area Network)
+	\item Internet
+	\item Extranet
+	\item VPN (Virtual Private Network)
+	\item PAN (Personal Area Network)
+	\item Peer to Peer (P2P)
+\end{itemize}
+
+In fact, the Internet is a really big WAN that is connected to thousands of LAN around the world.
+
+\subsubsection{Local Area Network}
+In a LAN, peripheral devices and data can be shared.
+There is a high data-transfer rate between computers on the network.
+
+\subsubsection{WLAN}
+A WLAN is just a wireless LAN.
+WLANs generally are not as fast as an wired network, but allows the wireless devices to move freely.
+However, the use of WiFi also reduce the safety of the data transfered. 
+To work around this, secure protocals (WEP, WPA, WPA2) should be used.
+
+\subsubsection{VLAN}
+VLAN stands for Virtual Local Area Network.
+A VLAN artificially divides a network into separate compartments.
+Logically separated computer networks are similar to physically separate networks.
+Unless separate rules have been set, the computer cannot see across a VLAN.
+VLANs allow for easy management of the resources on a network, and improves security.
+
+\subsubsection{WAN}
+A WAN connects many LANs across a wide geographic area.
+For example, a company may have a WAN connecting its many headquarters around the world.
+
+\subsubsection{SAN}
+A SAN network is a network specifically designed for the sharing of large storage devices.
+
+\subsubsection{Intranet and Extranet}
+An intranet is a collection of private computer networks within an organization that is not connected to the Internet.
+Intranets are secure and fast, but hard to access outside of the LAN.
+
+Similarly, an Extranet is a collection of private computer network, but opened to the Internet.
+This is less secure, but allows for more flexibility.
+
+\subsubsection{Internet}
+The Internet is just a very large WAN connecting billions of LANs around the world together.
+
+\subsubsection{IoT}
+Internet of Things are small devices that can connect to the Internet. 
+These small devices may send and receive data.
+
+\subsubsection{VPN}
+A Virtual Private Network allows for an encrypted tunnel to be established between two computers.
+This allows for remote workers to access the resources on a company Intranet while ensuring safety of data.
+
+\subsubsection{PAN}
+A Personal Area Network is composed of devices that are centered around an individual's workspace.
+These devices have very short ranges.
+
+\subsubsection{P2P}
+A Peer to Peer network do not uses the client/server network, but instead a distributed network architecture where all computer systems are decentralized.
+The same device can be both a server and a client.
+
+\subsection{Importance of Standards}
+There are two main organization setting standards for computer communication.
+Institute of Electrical and Electronics Engineers (IEEE) and Internet Engineering Task Force (IETF).
+The standards they create help create compatibility between hardware and software, computers of different brands and origins.
+Without standards, communication between computers are nearly impossible.
+
+\subsection{Networks, Communication, and Layers}
+In order to simplify the many layers of inter computer communication, a network is split into a different layers, where each layer represents a module.
+The \texttt{OSI Model} is created for this reason.
+The OSI Model stands for Open System Interconnection Model.
+
+The OSI Model is split into 7 parts. 
+\begin{enumerate}
+	\item Application: Various services used by the end user
+	\item Presentation: Provides data format, compression, encryption information.
+	\item Session: Manages a connection between two users
+	\item Transport: Definition of data segments, assignment of numbers, data transfer, re assemblage of data 
+	\item Networking: Handling packet switching
+	\item Data Link: Error handling for transitions, transmission rate, flow control
+	\item Physical: Transmission of 1 and 0 through cables and microwave. Definition of media and specification.
+\end{enumerate}
+
+The \texttt{TCP/IP} protocal describes functions that take place in each layer. 
+\begin{enumerate}
+	\item Application: Perform services for software.
+	\item Transport: The transformation of data.
+	\item Internet: Packet Switching
+	\item Network Access: Media and devices
+\end{enumerate}
+
+\subsection{Technology required for a VPN}
+Hardware requirements
+\begin{itemize}
+	\item Internet Access
+	\item VPN Software
+	\item VPN Routers
+	\item VPN Appliances
+	\item VPN Concentrators (handles large number of incoming VPN tunnels)
+	\item VPN Servers
+\end{itemize}
+
+For \textit{Secure} VPN (encrypted, tunneled VPN)
+\begin{enumerate}
+	\item IPSec (Internet Protocal, Security Protocal)
+		\begin{itemize}
+			\item AES (Encryption)
+		\end{itemize}
+	\item SSL (Secure Socket Layer) or TLS (Transport Layer Security)
+\end{enumerate}
+
+For \textit{Trusted} VPN (Secure on provider side)
+\begin{enumerate}
+	\item ATM (Asyncronous Transfer Mode) circuits
+	\item Frame delay circuits
+	\item Transport of layer 2 frames over MultiProtocol Label Switching
+\end{enumerate}
+
+\texttt{Hybrid} VPNs are a mix of Trusted and Secure VPN.
+
+\subsection{Common VPN Types}
+\begin{itemize}
+	\item Site to site VPN (Connecting network or facilites together)
+	\item Remote access VPN (remote into an intranet)
+\end{itemize}
+
+\subsection{Uses of a VPN}
+
+VPN Benefits
+\begin{itemize}
+	\item Easy Communication
+	\item Secure connection
+	\item Decrease operational cost when compared to WAN
+	\item Extended connection
+	\item Allows for remote work
+	\item Allows global networking
+	\item Simplify network topology
+\end{itemize}
+
+\section{Data Transmission}
+\subsection{Necessity of Protocols}
+Requirements for communication to take place:
+\begin{itemize}
+	\item Presence of an identified sender
+	\item Presence of an identified receiver
+	\item Presence of an agreed-upon method of communicating
+	\item Presence of a common language
+	\item Presence of a common grammar
+	\item Presence of an agreed-upon speed and timing of delivery
+	\item Presence of confirmation or acknowledgment requirements
+\end{itemize}
+
+Computer Networks Protocols also provides:
+\begin{itemize}
+	\item Rules about the message format
+	\item Rules about the way intermediary devices should facilitate communication
+	\item Rules about initiation and termination of a communication session
+	\item Rules about the type of error checking to be used
+	\item Rules about an error detection and correction mechanism
+	\item Rules about recovery and resending data
+\end{itemize}
+
+Computer Network Protocol guarantee:
+\begin{itemize}
+	\item Data Integrity
+	\item Source Integrity
+	\item Flow Control
+	\item Congestion Management
+	\item Deadlock Prevention
+	\item Error Checking
+	\item Error Correction
+\end{itemize}
+
+\subsection{Speed of Data Transmission across a network}
+We measure the ability of a medium to transfer data as bandwidth.
+Bandwidth is measured in $Mbps$, or Mega-bits per second.
+This is different from $MBps$, which means Mega-Byte per second.
+
+The theoretical speed of data is called bandwidth, the actual transfer rate is called throughput.
+While the slowest part of a network is called the bottleneck.
+Goodput measures the transfer rate of usable data.
+
+There are several factors that affect the speed of data transmission in a network:
+\begin{itemize}
+	\item Bandwidth
+	\item Data transfer rate of storage devices
+	\item Interference
+	\item Malicious software
+	\item Number of connected deviecs
+	\item Packet loss
+	\item Bottleneck
+	\item Client/Server specification
+\end{itemize}
+
+\subsection{Compression of Data}
+In order to reduce bandwidth, compression is sometimes used to reduce the file size.
+There is two types of compression, Lossy and Lossless.
+Text have to be compressed losslessy, but some medias can be compressed with lossy compression.
+
+\subsection{Characteristics of different transmission media}
+There are three most common wires.
+Fiber Optic cable, coaxial cables, and Unshielded Twisted Pair Cable (UTP).
+There are many wireless communication methods.
+\begin{itemize}
+	\item Microwave Radio
+	\item Satellites
+	\item Infrared
+	\item RFID
+	\item Bluetooth
+	\item Free Space Optics
+\end{itemize}
+
+In general, fiber optics is the fastest, most secure, and most reliable.
+Wireless is not as secure, and not as fast or reliable.
+UTP lies between the two.
+
+\subsection{Packet Switching}
+Packet switching is the communication method in which data packets are transfered through a network.
+Packets are sent individually, and may take different paths to the same destination.
+There is two method types of packet switching.
+
+Datagram packet switching, where each packet is sent with an address. 
+The route can be different per packet.
+
+Virtual Circuit packet switching, where the route and the destination is predetermined before hand.
+
+\subsection{Network Topology}
+There are eight basic topologies:
+\begin{itemize}
+	\item Point to point
+	\item bus
+	\item star
+	\item ring
+	\item mesh
+	\item tree
+	\item fully connected
+	\item hybrid
+\end{itemize}
+
+\section{Wireless Networking}
+
+\subsection{Advantages and Disadvantages}
+Advantages: 
+\begin{itemize}
+	\item Ease to setup
+	\item Cheap
+	\item Wireless/Convenient
+	\item Easier to plan
+\end{itemize}
+
+Disadvantage:
+\begin{itemize}
+	\item Slow
+	\item High error rates
+	\item Weather dependent
+	\item Weakest security
+	\item Unreliable
+\end{itemize}
+
+\subsection{Hardware and Software Components}
+Hardware needed
+\begin{itemize}
+	\item Modem 
+	\item Wireless Router/Access Point
+	\item Wireless Network Adapter (NIC)
+	\item Device
+	\item Wireless antennas
+	\item Wireless repeater
+	\item Ethernet repeater
+	\item Ethernet over power line
+\end{itemize}
+
+Software needed
+\begin{itemize}
+	\item DHCP (IP Address assigning)
+	\item Software Firewall
+	\item Name/SSID (Service Set IDentification)
+	\item NIC Drivers (Network Interface Card)
+	\item Operating System
+	\item Security Software
+	\item WAP (Wireless Application Protocol)
+	\item Web Browser
+\end{itemize}
+
+\end{document}
