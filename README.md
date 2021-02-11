@@ -14,7 +14,7 @@ All notes are currently __INCOMPLETE__, please use with precaution.
 _More to come!_
 
 ## Folder Structure
-PDFs for each subjects are in the _pdf_ folder. \
+PDFs for each of the subjects are in the _pdf_ folder. \
 Latex files for each subjects are in the _subjects_ folder.
 
 ## Compile
@@ -53,4 +53,4 @@ Clean up by running:
 make clean
 ```
 
-The `notes.tex` is the main LaTeX document.
+The `notes.tex` is the main LaTeX document for each Subject.
