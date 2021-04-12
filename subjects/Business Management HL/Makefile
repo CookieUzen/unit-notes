@@ -13,3 +13,4 @@ install:
 
 clean:
 	rm $(EXTRA)
+	rm units/*.aux
