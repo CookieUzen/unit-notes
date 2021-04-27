@@ -511,8 +511,130 @@ There is four steps in the cycle:
     \item Debtors
 \end{enumerate}
 
+\subsection{Cash Flow Forecast}
+Cash Flow forecast is a method of compiling a prediction of the cash flow of a company in the next few years.
+We generally use a table to represent this information.
+
+A sample table would look like this:
+\begin{tabular}{l c c c c c c}
+                             & January & February & March & April   & May    & June \\
+    Opening Balance          & 3000    & 4000     & 7000  & 10500   & 9000   & 7000 \\
+    \textbf{Cash Inflows}    &         &          &       &         &        & \\
+    Cash Sales Revenue       & 15000   & 20000    & 23000 & 27000   & 27000  & 34000 \\
+    Debtor payments          & 4000    & 3000     & 3000  & 4000    & 6000   & 5000 \\
+    Other income             & 0       & 2000     & 0     & 1000    & 0      & 0 \\
+    Total cash inflows       & 19000   & 25000    & 26000 & 32000   & 33000  & 39000 \\
+    \textbf{Cash outflows}   &         &          &       &         &        & \\
+    Peanuts                  & 5000    & 8000     & 8000  & 11000   & 12000  & 12000 \\
+    Packaging                & 1000    & 1500     & 1500  & 2500    & 4000   & 4000 \\
+    Rent                     & 2000    & 2000     & 2000  & 2000    & 2000   & 2000 \\
+    Wages                    & 6000    & 6000     & 6000  & 8000    & 8000   & 8000 \\
+    Suppliers                & 2500    & 3000     & 3500  & 7000    & 6000   & 6000 \\
+    Utilities                & 1500    & 1500     & 1500  & 3000    & 3000   & 3000 \\
+    Total cash outflows      & 18000   & 22000    & 22500 & 33500   & 35000  & 35000 \\
+    Net cash flow            & 1000    & 3000     & 3500  & (1500)* & (2000) & 4000 \\
+    Closing balance          & 4000    & 7000     & 10500 & 9000    & 7000   & 11000
+\end{tabular}
+
+Note, values in $(\texttt{brackets})$ are negative.
+
+As long as the opening and closing balances remains positive, the company will not be facing a cash crisis.
+This table help companies see when they will have a good cash flow position and when they may have a negative cash flow.
+Allowing them to create strategies that suits the current situation.
+
+
+Cash flow forecasts are important for a company's planning.
+They are often required when getting a bank loan.
+Companies can also compare their forecasts to the actual cash flow, which help with future strategies.
+
+Although cash flow is not the same as profit, it is very important to maintain a positive cash flow.
+As long as a company can maintain a positive cash flow, it does not need to maintain positive profits (in the short term) to stay alive.
+In fact, some profitable business may go bankrupt because of cash flow issues occurring when buying expensive fixed assets.
+
 \section{Investment Appraisal}
+In order to just the value of an investment, we cannot simply look at the cost and the potential returns.
+There are many other factors at work when deciding if an investment in worth it or not.
+
+\subsection{Payback Period}
+Payback period measures the time it takes for an investment to payback on itself.
+Since most Cash Flow forecasts are not linear, we tend to calculate the payback period by creating a table of net cash flow and cumulative cash flow.
+
+A sample table would look like this:
+\begin{tabular}{l c c c c}
+    Year & Cash inflow & Cash outflow & Net cash flow & Cumulative net flow \\
+    0    & 0           & 200,000      & -200,000      & -200,000 \\
+    1    & 80,000      & 20,000       & 60,000        & -140,000 \\
+    2    & 140,000     & 60,000       & 80,000        & -60,000 \\
+    3    & 240,000     & 120,000      & 120,000       & 60,000 \\
+    4    & 360,000     & 200,000      & 160,000       & 220,000 \\
+\end{tabular}
+
+The investment would be payed back by year 3, as the cumulative cash flow is positive.
+To be more precise, we can use a formula to find the exact month in which the investment is payed back:
+\begin{equation}
+    \texttt{Payback Period} = \frac{\textrm{Amount left to pay}}{\textrm{Net cash flow in that year}} \times 12
+\end{equation}
+
+Payback period is important, because money looses value overtime (depreciation).
+It can also determine how risky an investment is.
+The shorter the payback period, the better the investment.
+
+\subsection{Average Rate of Return}
+The Average Rate of Return measures the amount of the investment earned back each year.
+We can compare this with different investments, to show which investment is more profitable.
+For example, if the ARR of an investment is lower than the interest of a bank, then the investment is not worth it.
+Generally, investments with higher risks will have higher ARR.
+
+Use the equation below to calculate ARR:
+\begin{equation}
+    \frac{(\textrm{Total Returns} - \textrm{Capital Cost})}{\textrm{Years of Use} \times \textrm{Capital Cost}} \times 100 \%
+\end{equation}
+
+We can take the value of Total Returns $-$ Capital Cost from the cash flow table.
+
+\subsection{Net Present Value}
+Due to inflation, money devalue overtime.
+Money accessible now is worth more than money given in the future.
+
+In order to calculate the value of money overtime, we use a discount table.
+
+\begin{tabular}{l c c c c c}
+    Year   & Discount rate &        &        &        & \\
+           & 4\%           & 6\%    & 8\%    & 10\%   & 20\% \\
+    1      & 0.9615        & 0.9434 & 0.9259 & 0.9091 & 0.8333 \\
+    2      & 0.9246        & 0.89   & 0.8573 & 0.8264 & 0.6944 \\
+    3      & 0.889         & 0.8396 & 0.7938 & 0.7513 & 0.5787 \\
+    4      & 0.8548        & 0.7921 & 0.735  & 0.683  & 0.4823 \\
+    5      & 0.8219        & 0.7473 & 0.6806 & 0.6209 & 0.4019 \\
+    6      & 0.7903        & 0.705  & 0.6302 & 0.5645 & 0.3349 \\
+    7      & 0.7599        & 0.6651 & 0.5835 & 0.5132 & 0.2791 \\
+    8      & 0.7307        & 0.6271 & 0.5403 & 0.4665 & 0.2326 \\
+    9      & 0.7026        & 0.5919 & 0.5002 & 0.4241 & 0.1938 \\
+    10     & 0.6756        & 0.5584 & 0.4632 & 0.3855 & 0.1615
+\end{tabular}
+
+The discount table is given on the test.
+
+We would apply the discount table our cash flow table like so:
+\begin{tabular}{l c c c c c}
+    Year               & Cash inflow & Cash outflow & Net flow & 10\% discount rate & Present value \\
+    0                  & 0           & 200,000      & -200,000 & 1.0000             & -200,000 \\
+    1                  & 80,000      & 20,000       & 60,000   & 0.9091             & 54,546 \\
+    2                  & 140,000     & 60,000       & 80,000   & 0.8264             & 66,112 \\
+    3                  & 240,000     & 120,000      & 120,000  & 0.7513             & 90,156 \\
+    4                  & 360,000     & 200,000      & 160,000  & 0.6830             & 109,280 \\
+                       &             &              &          & Net present value  & 120,094
+\end{tabular}
+
+\subsection{Evaluation of Investment Appraisal}
+We can evaluate an investment by using quantitative data from the metrics above.
+Since numbers themselves don't mean anything, we would compare values of two investments to evaluate.
+
+It is important to remember all forecasts are predictions, and may not be accurate.
+So its often important to consider the non quantitative data when making a decision.
 
 \section{Budgets}
 
+
 \end{document}
+
