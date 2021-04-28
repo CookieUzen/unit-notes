@@ -519,11 +519,13 @@ A sample table would look like this:
 \begin{tabular}{l c c c c c c}
                              & January & February & March & April   & May    & June \\
     Opening Balance          & 3000    & 4000     & 7000  & 10500   & 9000   & 7000 \\
+    \hline
     \textbf{Cash Inflows}    &         &          &       &         &        & \\
     Cash Sales Revenue       & 15000   & 20000    & 23000 & 27000   & 27000  & 34000 \\
     Debtor payments          & 4000    & 3000     & 3000  & 4000    & 6000   & 5000 \\
     Other income             & 0       & 2000     & 0     & 1000    & 0      & 0 \\
     Total cash inflows       & 19000   & 25000    & 26000 & 32000   & 33000  & 39000 \\
+    \hline
     \textbf{Cash outflows}   &         &          &       &         &        & \\
     Peanuts                  & 5000    & 8000     & 8000  & 11000   & 12000  & 12000 \\
     Packaging                & 1000    & 1500     & 1500  & 2500    & 4000   & 4000 \\
@@ -531,6 +533,7 @@ A sample table would look like this:
     Wages                    & 6000    & 6000     & 6000  & 8000    & 8000   & 8000 \\
     Suppliers                & 2500    & 3000     & 3500  & 7000    & 6000   & 6000 \\
     Utilities                & 1500    & 1500     & 1500  & 3000    & 3000   & 3000 \\
+    \hline
     Total cash outflows      & 18000   & 22000    & 22500 & 33500   & 35000  & 35000 \\
     Net cash flow            & 1000    & 3000     & 3500  & (1500)* & (2000) & 4000 \\
     Closing balance          & 4000    & 7000     & 10500 & 9000    & 7000   & 11000
@@ -562,6 +565,7 @@ Since most Cash Flow forecasts are not linear, we tend to calculate the payback 
 A sample table would look like this:
 \begin{tabular}{l c c c c}
     Year & Cash inflow & Cash outflow & Net cash flow & Cumulative net flow \\
+    \hline
     0    & 0           & 200,000      & -200,000      & -200,000 \\
     1    & 80,000      & 20,000       & 60,000        & -140,000 \\
     2    & 140,000     & 60,000       & 80,000        & -60,000 \\
@@ -600,7 +604,10 @@ In order to calculate the value of money overtime, we use a discount table.
 
 \begin{tabular}{l c c c c c}
     Year   & Discount rate &        &        &        & \\
+    \hline
            & 4\%           & 6\%    & 8\%    & 10\%   & 20\% \\
+    \hline
+    \hline
     1      & 0.9615        & 0.9434 & 0.9259 & 0.9091 & 0.8333 \\
     2      & 0.9246        & 0.89   & 0.8573 & 0.8264 & 0.6944 \\
     3      & 0.889         & 0.8396 & 0.7938 & 0.7513 & 0.5787 \\
@@ -616,8 +623,10 @@ In order to calculate the value of money overtime, we use a discount table.
 The discount table is given on the test.
 
 We would apply the discount table our cash flow table like so:
+
 \begin{tabular}{l c c c c c}
     Year               & Cash inflow & Cash outflow & Net flow & 10\% discount rate & Present value \\
+    \hline
     0                  & 0           & 200,000      & -200,000 & 1.0000             & -200,000 \\
     1                  & 80,000      & 20,000       & 60,000   & 0.9091             & 54,546 \\
     2                  & 140,000     & 60,000       & 80,000   & 0.8264             & 66,112 \\
@@ -634,7 +643,61 @@ It is important to remember all forecasts are predictions, and may not be accura
 So its often important to consider the non quantitative data when making a decision.
 
 \section{Budgets}
+Not all business forecasts are accurate. 
+Budgeting is the act of creating proper plans and forecasts that will help the company and serve as an accurate measurement of performance.
 
+A budget can be broken into two parts: future revenue and future cost.
+Compared to business strategies, budgets are short-termed (lasting around a year) and coordinated (agreed upon by all departments).
+
+\subsection{Variances}
+Variance measures the difference between a business' budgeted expenditure and the actual expenditure.
+A favorable variance is when the actual results were better than the prediction.
+An adverse variance is when the actual results were worse than the prediction.
+No variance is when the actual results are the same to the prediction.
+
+Variance can occur in revenue, cost, and profit.
+
+Below is a table showing a sample budget and variance:
+
+\begin{tabular}{l c c c c}
+    Item                              & Budgeted & Actual  & Variance & Favorable or adverse? \\
+    \hline
+    \textbf{Revenue}                  &          &         &          & \\
+    Revenue from rooms                & £10,000  & £12,000 & £2,000   & Favorable (F)             \\
+    Revenue from food and drink sales & £2,500   & £1,900  & £600     & Adverse (A)               \\
+    TOTAL REVENUE                     & £12,500  & £13,900 & £1,400   & Favorable (F)             \\
+    \hline
+    \textbf{Costs}                    &          &         &          & \\
+    Staffing costs                    & £6,600   & £7,000  & £400     & Adverse (A)               \\
+    Marketing costs                   & £400     & £400    & £0       & No variance               \\
+    Food and drink costs              & £1,250   & £950    & £300     & Favorable (F)             \\
+    Utilities costs                   & £600     & £650    & £50      & Adverse (A)               \\
+    Cleaning and miscellaneous costs  & £320     & £400    & £80      & Adverse (A)               \\
+    \hline
+    TOTAL COSTS                       & £9,170   & £9,400  & £230     & Adverse (A)               \\
+    Forecast profit                   & £3,330   & £4,500  & £1,170   & Favorable (F)
+\end{tabular}
+
+Variance is calculated as Actual Figure $-$ Budgeted Figure.
+
+\subsection{Cost and Profit Center}
+Cost and profit centers describe the departments of a business that contribute to its overall revenue.
+
+Profit centers are departments that generate revenue.
+Areas that have both cost and revenue are profit centers.
+You can calculate the \texttt{Revenue Variance}, \texttt{Cost Variance}, and \texttt{Profit Variance} for a profit center.
+
+Cost centers are departments that generate cost.
+You can calculate the \texttt{Cost Variance} for a profit center.
+
+\subsection{Roles of Budgeting}
+Budgeting can help with 
+\begin{description}
+    \item[Planning] Refine plans, create estimates
+    \item[Control] Control business activities, help with decision making
+    \item[Measure Performance] Evaluate performance of departments or managers
+    \item[Communication] Communicate objectives with different departments
+    \item[Coordination] Help consider the relationship between different departments
+\end{description}
 
 \end{document}
-
