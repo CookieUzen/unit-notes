@@ -1,5 +1,8 @@
 # IB Diploma Program Notes Central
 
+**This project is currently deprecated**
+Go to [web-notes](https://github.com/CookieUzen/web-notes) for an updated version of this project.
+
 _A collection of notes for studying the multiple IB Subjects._
 
 All notes are currently __INCOMPLETE__, please use with precaution. 
